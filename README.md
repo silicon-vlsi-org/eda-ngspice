@@ -6,7 +6,6 @@
 ## Table of Content
 - [Environment Variables](#Environment-Variables)
 - [QuickStart Guide](#Quick-Start-Guide)
-- [Using the Python Library](#Using-the-Python-Library)
 - [Compile Instructions](#compile-instructions)
 - [Technology](#Technology)
   - [MOSIS Scalable CMOS](#mosis-scalable-cmos-scmos)
@@ -57,9 +56,6 @@ The preferred method of running ngspice is in batch mode:
 ngspice -b -r filename.raw -o filename.log input.sp
 ```
 And to quit, simply type `quit`.
-
-## Using the Python Library
-[FIXME: Add relevant information]
 
 ## Technology
 ### MOSIS Scalable CMOS ([SCMOS])
