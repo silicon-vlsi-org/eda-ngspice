@@ -65,7 +65,7 @@ And to quit, simply type `quit`.
 ### MOSIS Scalable CMOS ([SCMOS])
 [SCMOS] is a *lambda-based* scalable design rules that can be interfaced to many CMOS fabrication process available at MOSIS. **NOTE** The scalable design rules does not interface with Fabs now because of lot unique process nuances.
 
-- The Spice model files are located at `<PATH-TO-REPO>/project2020/eda/ngspice-32/models/scn4m_subm`
+- The Spice model files are located at `<INSTALL-DIR>/ngspice/models/scn4m_subm_cnrs.lib`
 - Typical MOS parameters:
   - **NMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=0.49V, un(mobility)=445 cm^2/Vs
   - **PMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=-0.66V, up(mobility)=151 cm^2/Vs
