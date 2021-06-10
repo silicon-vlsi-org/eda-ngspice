@@ -6,8 +6,9 @@
 ## Table of Content
 - [Environment Variables](#Environment-Variables)
 - [QuickStart Guide](#Quick-Start-Guide)
-  - [Using the Python Library](#Using-the-Python-Library)
+- [Using the Python Library](#Using-the-Python-Library)
 - [Compile Instructions](#compile-instructions)
+- [Tasks](#Tasks)
 
 ## Environment Variables
 
@@ -54,7 +55,7 @@ ngspice -b -r filename.raw -o filename.log input.sp
 ```
 And to quit, simply type `quit`.
 
-### Using the Python Library
+## Using the Python Library
 [FIXME: Add relevant information]
 
 ## Compile Instructions
