@@ -7,7 +7,7 @@
 - [Environment Variables](#Environment-Variables)
 - [QuickStart Guide](#Quick-Start-Guide)
   - [Using the Python Library](#Using-the-Python-Library)
-- [Compile Instructions](compile-instructions)
+- [Compile Instructions](#compile-instructions)
 
 ## Environment Variables
 
@@ -92,3 +92,5 @@ And to quit, simply type `quit`.
 [Magic]:                http://opencircuitdesign.com/magic/
 [Netgen]:               http://opencircuitdesign.com/netgen/
 
+## Tasks
+- [ ] Add ngspice examples
