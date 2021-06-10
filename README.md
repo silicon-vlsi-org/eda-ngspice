@@ -8,6 +8,9 @@
 - [QuickStart Guide](#Quick-Start-Guide)
 - [Using the Python Library](#Using-the-Python-Library)
 - [Compile Instructions](#compile-instructions)
+- [Technology](#Technology)
+  - [MOSIS Scalable CMOS](#mosis-scalable-cmos-scmos)
+  - [Skywater 130nm PDK](#skywater-130nm-pdk)
 - [Tasks](#Tasks)
 
 ## Environment Variables
@@ -57,6 +60,20 @@ And to quit, simply type `quit`.
 
 ## Using the Python Library
 [FIXME: Add relevant information]
+
+## Technology
+### MOSIS Scalable CMOS ([SCMOS])
+[SCMOS] is a *lambda-based* scalable design rules that can be interfaced to many CMOS fabrication process available at MOSIS. **NOTE** The scalable design rules does not interface with Fabs now because of lot unique process nuances.
+
+- The Spice model files are located at `<PATH-TO-REPO>/project2020/eda/ngspice-32/models/scn4m_subm`
+- Typical MOS parameters:
+  - **NMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=0.49V, un(mobility)=445 cm^2/Vs
+  - **PMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=-0.66V, up(mobility)=151 cm^2/Vs
+  - Vdd=5V, Lmin=0.4um, Wmin=0.6um
+
+### Skywater 130nm PDK
+- https://www.github.com/google/skywater-pdk
+- https://skywater-pdk.readthedocs.io/en/latest/
 
 ## Compile Instructions
 
