@@ -95,6 +95,10 @@ And to quit, simply type `quit`.
 - Copied ngspice from ```/home/ubuntu/eda-bins/ngspice-34``` to git repo and pushed it to the cloud.
 
 
+## Tasks
+- [ ] Add more ngspice examples
+
+
 * * *
 
 [OpenRAM]:              https://openram.soe.ucsc.edu/
@@ -106,5 +110,3 @@ And to quit, simply type `quit`.
 [Magic]:                http://opencircuitdesign.com/magic/
 [Netgen]:               http://opencircuitdesign.com/netgen/
 
-## Tasks
-- [ ] Add ngspice examples
