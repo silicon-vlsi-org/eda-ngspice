@@ -6,8 +6,10 @@
 ## Table of Content
 - [Environment Variables](#Environment-Variables)
 - [QuickStart Guide](#Quick-Start-Guide)
-- [Using the Python Library](#Using-the-Python-Library)
 - [Compile Instructions](#compile-instructions)
+- [Technology](#Technology)
+  - [MOSIS Scalable CMOS](#mosis-scalable-cmos-scmos)
+  - [Skywater 130nm PDK](#skywater-130nm-pdk)
 - [Tasks](#Tasks)
 
 ## Environment Variables
@@ -55,8 +57,19 @@ ngspice -b -r filename.raw -o filename.log input.sp
 ```
 And to quit, simply type `quit`.
 
-## Using the Python Library
-[FIXME: Add relevant information]
+## Technology
+### MOSIS Scalable CMOS ([SCMOS])
+[SCMOS] is a *lambda-based* scalable design rules that can be interfaced to many CMOS fabrication process available at MOSIS. **NOTE** The scalable design rules does not interface with Fabs now because of lot unique process nuances.
+
+- The Spice model files are located at `<INSTALL-DIR>/ngspice/models/scn4m_subm_cnrs.lib`
+- Typical MOS parameters:
+  - **NMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=0.49V, un(mobility)=445 cm^2/Vs
+  - **PMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=-0.66V, up(mobility)=151 cm^2/Vs
+  - Vdd=5V, Lmin=0.4um, Wmin=0.6um
+
+### Skywater 130nm PDK
+- https://www.github.com/google/skywater-pdk
+- https://skywater-pdk.readthedocs.io/en/latest/
 
 ## Compile Instructions
 
@@ -82,6 +95,10 @@ And to quit, simply type `quit`.
 - Copied ngspice from ```/home/ubuntu/eda-bins/ngspice-34``` to git repo and pushed it to the cloud.
 
 
+## Tasks
+- [ ] Add more ngspice examples
+
+
 * * *
 
 [OpenRAM]:              https://openram.soe.ucsc.edu/
@@ -93,5 +110,3 @@ And to quit, simply type `quit`.
 [Magic]:                http://opencircuitdesign.com/magic/
 [Netgen]:               http://opencircuitdesign.com/netgen/
 
-## Tasks
-- [ ] Add ngspice examples
