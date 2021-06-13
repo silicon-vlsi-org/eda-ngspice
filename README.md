@@ -3,17 +3,16 @@
 - [NGSpice] is a open source spice simulator for electric and electronic circuits. 
 - [NGSpice Reference Manual][NGSpiceMan]: Complete reference manual in HTML format.
 
+This repo contains pre-compiled binaries/libraries/etc of **Ngspice Version 34** for **64-bit 18.04 Ubuntu Linux**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in Section-[Compiling and Installing Ngspice](#compiling-and-installing-ngspice) should help.
+
 ## Table of Content
-- [Environment Variables](#Environment-Variables)
+- [Setting Up Ngspice](#setting-up-ngspice)
 - [QuickStart Guide](#Quick-Start-Guide)
-- [Compile Instructions](#compile-instructions)
 - [Technology](#Technology)
-  - [MOSIS Scalable CMOS](#mosis-scalable-cmos-scmos)
-  - [Skywater 130nm PDK](#skywater-130nm-pdk)
+- [Compiling and Installing Ngspice](#compiling-and-installing-ngspice)
 - [Tasks](#Tasks)
 
-## Environment Variables
-
+## Setting Up Ngspice
 Add the following environment variables in your `~/.bashrc`
 
 ```bash
@@ -23,7 +22,7 @@ export  PATH=$PATH:$SPICE_EXEC_DIR
 ```
 There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can overwrite any of the initilization by adding commands to a local `~/.spiceinit` .
 
-The Spice model files are located at [FIXME]
+The Spice model files are located in the ```https://github.com/silicon-vlsi-org/eda-technology``` repository.
 
 ## Quick Start Guide
 You can open a text editor create a *netlist* of the intended circuit for example of a voltage divider as shown below (say filename `divider.sp`):
@@ -58,20 +57,9 @@ ngspice -b -r filename.raw -o filename.log input.sp
 And to quit, simply type `quit`.
 
 ## Technology
-### MOSIS Scalable CMOS ([SCMOS])
-[SCMOS] is a *lambda-based* scalable design rules that can be interfaced to many CMOS fabrication process available at MOSIS. **NOTE** The scalable design rules does not interface with Fabs now because of lot unique process nuances.
+All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
 
-- The Spice model files are located at `<INSTALL-DIR>/ngspice/models/scn4m_subm_cnrs.lib`
-- Typical MOS parameters:
-  - **NMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=0.49V, un(mobility)=445 cm^2/Vs
-  - **PMOS**: tox=7.6nm, nch=1.7e17/cm^3, Vt0=-0.66V, up(mobility)=151 cm^2/Vs
-  - Vdd=5V, Lmin=0.4um, Wmin=0.6um
-
-### Skywater 130nm PDK
-- https://www.github.com/google/skywater-pdk
-- https://skywater-pdk.readthedocs.io/en/latest/
-
-## Compile Instructions
+## Compiling and Installing Ngspice
 
 **SETTING UP LINUX FOR COMPILE**
 
