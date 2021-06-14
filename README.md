@@ -32,15 +32,13 @@ The Spice model files are located in the ```https://github.com/silicon-vlsi-org/
 
 ## Quick Start Guide
 
-- There are few simple spice examples in ```<INSTALLDIR>/eda-ngspice/examples/getStarted```
+- To quickly get started, there are few simple spice examples in ```<INSTALLDIR>/eda-ngspice/examples/getStarted```
+- There is suggested order in README based on difficulty that you can follow.
 - You can copy the examples to a local directory and start ```ngspice`` in that directory.
 - Source/run the spice netlist in the spice command prompt: ```spice-1> source l1-res-div.sp```
 - You can continue running spice commands in the spice command prompt ie. ```ngspice-x >```
 - To quit simply type ```quit()```
-- You can also run ngspice is in batch mode:
-```bash
-ngspice -b -r filename.raw -o filename.log input.sp
-```
+- You can also run ngspice is in batch mode: ```ngspice -b -r filename.raw -o filename.log input.sp```
 
 ## Technology
 All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
@@ -66,8 +64,20 @@ All technology files maintained in the https://github.com/silicon-vlsi-org/eda-t
 - Copied ```compile_linux.sh``` to ```compile_ng34.sh``` and edited the following:
   - ```../configure --with-x --with-readline=yes --disable-debug --prefix=/home/ubuntu/eda-bins/ngspice-34 CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"```
 - Ran the script ```./compile_ng34.sh```
-- Copied ngspice from ```/home/ubuntu/eda-bins/ngspice-34``` to git repo and pushed it to the cloud.
-- Once it is verified
+- On successful compilation, the new compiled binaries/libs/should be in the target directory eg. ```/home/ubuntu/eda-bins/ngspice-34```
+  
+**CREATING A NEW RELEASE**
+Check out this [doc](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository) in docs.github.com on how to create and manage releases.
+  
+- Check out the difference between the previous and current version: eg.
+```bash
+  diff -qr ~/eda-bins/ngspice-34/glnxa64  <GIT-INSTALL_DIR>/eda-ngspice/glnxa64
+```
+- Copy only the differences to the git repo, `add`, `commit` and `push` to the `github`.
+- Navigate to the main repo page eg. github.com/silicon-vlsi-org/eda-ngspice
+- To the right of the list of files, click **Create a new release** under the **Release** section.
+- 
+  
 
 ## Tasks
 - [ ] Add more ngspice examples
