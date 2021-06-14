@@ -6,18 +6,24 @@
 This repo contains pre-compiled binaries/libraries/etc of **Ngspice Version 34** for **64-bit 18.04 Ubuntu Linux**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in Section-[Compiling and Installing Ngspice](#compiling-and-installing-ngspice) should help.
 
 ## Table of Content
-- [Setting Up Ngspice](#setting-up-ngspice)
+- [Downloading & Setting Up Ngspice](#downloading-&-setting-up-ngspice)
 - [QuickStart Guide](#Quick-Start-Guide)
 - [Technology](#Technology)
 - [Compiling and Installing Ngspice](#compiling-and-installing-ngspice)
 - [Tasks](#Tasks)
 
-## Setting Up Ngspice
+## Downloading & Setting Up Ngspice
+
+- Change directory ```cd``` to install directory <INSTALLDIR> e.g. ```/home/user/cad```
+- To download from the ```git``` repository:
+- ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
+- Checkout the desired version: ```git checkout v34.0```
+
 Add the following environment variables in your `~/.bashrc`
 
 ```bash
-export  SPICE_LIB_DIR=<INSTALLDIR>/glnxa64/share/ngspice
-export  SPICE_EXEC_DIR=<INSTALLDIR>/glnxa64/bin
+export  SPICE_LIB_DIR=<INSTALLDIR>/eda-ngspice/glnxa64/share/ngspice
+export  SPICE_EXEC_DIR=<INSTALLDIR>/eda-ngspice/glnxa64/bin
 export  PATH=$PATH:$SPICE_EXEC_DIR
 ```
 There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can overwrite any of the initilization by adding commands to a local `~/.spiceinit` .
@@ -25,36 +31,16 @@ There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can ove
 The Spice model files are located in the ```https://github.com/silicon-vlsi-org/eda-technology``` repository.
 
 ## Quick Start Guide
-You can open a text editor create a *netlist* of the intended circuit for example of a voltage divider as shown below (say filename `divider.sp`):
-```spice
-First line in ngspice is always the title line
-* This is a comment line
-Vbat    vin     0       DC 5
-R1      vin     vout    1k
-R2      vout    0       1k
 
-.control
-tran 0.1u 1u
-.endc
-
-.end
-```
-Then start `ngspice` and source the netlist at the ngspice command prompt:
-```bash
-ngspice 1 -> source divider.sp
-```
-It should output the node voltages at the initial transient voltages. you can plot any of the nodes eg.:
-```bash
-ngspice 2 -> plot v(vout)
-```
-
-**IMPORANT NOTE** While editing inside ngspice, if you make an error, you may lose the netlist file. This maybe a bug in ngspice.
-
-The preferred method of running ngspice is in batch mode:
+- There are few simple spice examples in ```<INSTALLDIR>/eda-ngspice/examples/getStarted```
+- You can copy the examples to a local directory and start ```ngspice`` in that directory.
+- Source/run the spice netlist in the spice command prompt: ```spice-1> source l1-res-div.sp```
+- You can continue running spice commands in the spice command prompt ie. ```ngspice-x >```
+- To quit simply type ```quit()```
+- You can also run ngspice is in batch mode:
 ```bash
 ngspice -b -r filename.raw -o filename.log input.sp
 ```
-And to quit, simply type `quit`.
 
 ## Technology
 All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
@@ -81,7 +67,7 @@ All technology files maintained in the https://github.com/silicon-vlsi-org/eda-t
   - ```../configure --with-x --with-readline=yes --disable-debug --prefix=/home/ubuntu/eda-bins/ngspice-34 CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"```
 - Ran the script ```./compile_ng34.sh```
 - Copied ngspice from ```/home/ubuntu/eda-bins/ngspice-34``` to git repo and pushed it to the cloud.
-
+- Once it is verified
 
 ## Tasks
 - [ ] Add more ngspice examples
