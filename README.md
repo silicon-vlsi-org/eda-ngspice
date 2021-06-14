@@ -22,8 +22,7 @@ precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux**. It's also tested o
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
   - ```* (HEAD detached at v34.0)```
 
-- Add the following environment variables in your `~/.bashrc` (**NOTE**: The path below is an example, make sure it matches your particular path) 
-
+- Add the following environment variables in your `~/.bashrc` 
 ```bash
 export  SPICE_LIB_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/share/ngspice
 export  SPICE_EXEC_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/bin
