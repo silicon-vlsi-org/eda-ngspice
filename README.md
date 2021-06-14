@@ -1,4 +1,4 @@
-# NGSPICE VERSION 34 64-bit
+# NGSPICE 
 - http://ngspice.sourceforge.net
 - [NGSpice] is a open source spice simulator for electric and electronic circuits. 
 - [NGSpice Reference Manual][NGSpiceMan]: Complete reference manual in HTML format.
