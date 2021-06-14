@@ -32,6 +32,7 @@ Check out this [doc](https://docs.github.com/en/github/administering-a-repositor
   diff -qr ~/eda-bins/ngspice-34/glnxa64  <GIT-INSTALL_DIR>/eda-ngspice/glnxa64
 ```
 - Copy only the differences to the git repo, `add`, `commit` and `push` to the `github`.
+  - **IMPORTANT** Make sure you backup the previous binaries in case you need it.
 - Navigate to the main repo page eg. github.com/silicon-vlsi-org/eda-ngspice
 - To the right of the list of files, click **Create a new release** under the **Release** section.
 - Tag the release version eg. ```v34.0```
