@@ -16,7 +16,10 @@ This repo contains pre-compiled binaries/libraries/etc of **Ngspice Version 34**
 - Change directory ```cd``` to install directory <INSTALLDIR> e.g. ```/home/user/cad```
 - To download from the ```git``` repository:
 - ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
+- Change directory to the installed ngspice directory eg. ```cd eda-ngspice```
 - Checkout the desired version: ```git checkout v34.0```
+  - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
+  - ```* (HEAD detached at v34.0)```
 
 Add the following environment variables in your `~/.bashrc`
 
