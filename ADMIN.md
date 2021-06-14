@@ -9,7 +9,7 @@ This documentation is NOT for users, only if you are interested to compile, inst
 - ```sudo apt install build-essential linux-headers-‘uname -r‘```
 - ```sudo apt install bison flex libx11-dev libxaw7-dev libtool libreadline-dev libncurces-dev```
 - ```sudo apt install automake autoconf texinfo``` (```INSTALL``` says only for git repo )
-- 
+ 
 **USING SOURCE FROM GIT REPO**
 
 - Compiled on Linux AWS Lightsail **5.4.0-1049-aws** #51~**18.04.1-Ubuntu**
