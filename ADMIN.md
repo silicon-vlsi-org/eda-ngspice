@@ -34,7 +34,12 @@ Check out this [doc](https://docs.github.com/en/github/administering-a-repositor
 - Copy only the differences to the git repo, `add`, `commit` and `push` to the `github`.
 - Navigate to the main repo page eg. github.com/silicon-vlsi-org/eda-ngspice
 - To the right of the list of files, click **Create a new release** under the **Release** section.
-- 
+- Tag the release version eg. ```v34.0```
+  - The major release ```v34``` reflects the version of ngspice.
+  - The minor release ```vxx.0``` reflects any changes done locally eg. examples, docs, etc.
+- Do not add any binaries and do not select pre-release.
+- Publish the release. 
+- Now users can checkout this version eg. ```git checkout v34.0```
   
 
 ## Tasks
