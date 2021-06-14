@@ -5,7 +5,7 @@ Testbench for inverter sub-circuit
 .LIB scn4m_cnrs_bsim3v1.lib nom
 
 **Include the Inverter netlist
-.INCLUDE l4-subckt.sp
+.INCLUDE subckt-inv.sp
 
 **Instatiate inverter
 *Xname <port-1> <port-n> subckt-name
