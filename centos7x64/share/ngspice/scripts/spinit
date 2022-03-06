@@ -17,12 +17,12 @@ set interactive
 strcmp __flag $program "ngspice"
 if $__flag = 0
 
- codemodel /home/centos/ngspice-bin/lib/ngspice/spice2poly.cm
- codemodel /home/centos/ngspice-bin/lib/ngspice/analog.cm
- codemodel /home/centos/ngspice-bin/lib/ngspice/digital.cm
- codemodel /home/centos/ngspice-bin/lib/ngspice/xtradev.cm
- codemodel /home/centos/ngspice-bin/lib/ngspice/xtraevt.cm
- codemodel /home/centos/ngspice-bin/lib/ngspice/table.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/spice2poly.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/analog.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/digital.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/xtradev.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/xtraevt.cm
+* codemodel /home/centos/ngspice-bin/lib/ngspice/table.cm
 
 end
 unset __flag
