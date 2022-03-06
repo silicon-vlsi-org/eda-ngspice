@@ -30,8 +30,8 @@ The source code was compiled on a CentOS 7 VM in Digital Ocean.
 
 **PREREQUISTES**
 
-- Install all necessary Libs in Chap 32.1 of ngspice manual: `
-  - `bison, flex`, `libX11/libX11-devel`, `libXaw/libXaw-devel`, `libXmu/libXmu-devel``, `libXext/libXext-devel`, `libXft/libXft-devel`, `fontconfig/fontconfig-devel`,  `libXrender/libXrender-devel`, `freetype/freetype-devel`, `readline/readline-devel`
+- Install all necessary Libs in Chap 32.1 of ngspice manual:
+  - `bison, flex`, `libX11/libX11-devel`, `libXaw/libXaw-devel`, `libXmu/libXmu-devel`, `libXext/libXext-devel`, `libXft/libXft-devel`, `fontconfig/fontconfig-devel`,  `libXrender/libXrender-devel`, `freetype/freetype-devel`, `readline/readline-devel`
   - Additionally, in order to run the compile script you need `autoconf, automake, libtools`
   - Load the `Development Tools` from the default CentOS repo: `#yum group install 'Development Tools'`
 - Installing **Latest GCC Compiler**. The stock compiler in CentOS 7 repo is `gcc-4.8` which is too outdated to compile ngspice. Will get errors in compilation. Followed this [thread](https://linuxize.com/post/how-to-install-gcc-compiler-on-centos-7/) to install the latest version and enable it. 
