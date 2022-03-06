@@ -1,7 +1,7 @@
 # ADMIN
 This documentation is NOT for users, only if you are interested to compile, install and mange releases as done in this repo.
 
-## Compiling and Installing Ngspice
+## Compiling and Installing Ngspice in Ubuntu 18.04
 
 **SETTING UP LINUX FOR COMPILE**
 
@@ -23,8 +23,37 @@ This documentation is NOT for users, only if you are interested to compile, inst
   - ```../configure --with-x --with-readline=yes --disable-debug --prefix=/home/ubuntu/eda-bins/ngspice-34 CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"```
 - Ran the script ```./compile_ng34.sh```
 - On successful compilation, the new compiled binaries/libs/should be in the target directory eg. ```/home/ubuntu/eda-bins/ngspice-34```
-  
-**CREATING A NEW RELEASE**
+ 
+## Compiling and Installing Ngspice in CentOS 7
+
+The source code was compiled on a CentOS 7 VM in Digital Ocean.
+
+**PREREQUISTES**
+
+- Install all necessary Libs in Chap 32.1 of ngspice manual: `
+  - `bison, flex`, `libX11/libX11-devel`, `libXaw/libXaw-devel`, `libXmu/libXmu-devel``, `libXext/libXext-devel`, `libXft/libXft-devel`, `fontconfig/fontconfig-devel`,  `libXrender/libXrender-devel`, `freetype/freetype-devel`, `readline/readline-devel`
+  - Additionally, in order to run the compile script you need `autoconf, automake, libtools`
+  - Load the `Development Tools` from the default CentOS repo: `#yum group install 'Development Tools'`
+- Installing **Latest GCC Compiler**. The stock compiler in CentOS 7 repo is `gcc-4.8` which is too outdated to compile ngspice. Will get errors in compilation. Followed this [thread](https://linuxize.com/post/how-to-install-gcc-compiler-on-centos-7/) to install the latest version and enable it. 
+  - `# yum install centos-release-scl` : Install the __Software Community Library__ which contains the recent `gcc` versions. At the time of last compilation, __Developer Toolset 11__ is available. 
+  - `# yum install devtoolset-11`
+  - `$ scl enable devtoolset-11 bash` : Need to enable it before compiling the srouce code.
+
+**DOWNLOADING TARBALL AND COMPILING**
+
+- `wget https://sourceforge.net/projects/ngspice/files/ng-spice-rework/36/ngspice-36.tar.gz` : Download the current revision. **NOTE** 36 will be replaced by whatever is the current revision.
+- `tar -xzvf ngspice-36.tar.gz` 
+- `cd ngspice-36`
+- `mkdir release`
+- Copy `compile_linux.sh` to `compile_ng36.sh` and edited the following:
+  - `../configure --with-x --with-readline=yes --disable-debug --prefix=/home/centos/ngspice-bin CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"`
+  - **--enable=xspice NOTE** If you enable `xspice` and `adms`, it creates a shared lib in the install directory but it is hardcoded internally. So when the binary is installed in another location, you get a __permission denied__ error.
+- `scl enable devtoolset-11 bash`
+- `./compile_ng34.sh`
+- On successful compilation, the new compiled binaries/libs/should be in the target directory eg. `/home/centos/ngspice-bin`
+
+## Creating a New Release
+
 Check out this [doc](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository) in docs.github.com on how to create and manage releases.
   
 - Check out the difference between the previous and current version: eg.
@@ -44,4 +73,4 @@ Check out this [doc](https://docs.github.com/en/github/administering-a-repositor
   
 
 ## Tasks
-- [ ] Add more ngspice examples
+- [ ] Add a getting started tutorial with some real life examples.
