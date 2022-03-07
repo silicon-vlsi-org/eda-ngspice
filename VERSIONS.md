@@ -1,8 +1,11 @@
-# CHANGES
-This file tracks all the changes to each of the releases.
+# VERSIONS
+Use these version numbers when checking out a release/version
 
-## Changes for next release
+## v36.0
+- ngspice 36 for Ubuntu 18.04 
+- added ngspice 36 binaries for CentOS 7
 - Typo fix in ```examples/getStarted/test-subckt.sp```
+- updated few relevant examples
 
 ## v34.0
 - ngspice 34

@@ -21,6 +21,7 @@ precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (C
 - Checkout the desired version: ```git checkout v34.0```
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
   - ```* (HEAD detached at v34.0)```
+  - **NOTE** The revision history is maintained in VERSIONS.md
 
 - Add the following environment variables in your `~/.bashrc` 
 ```bash
