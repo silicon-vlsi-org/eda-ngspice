@@ -36,11 +36,11 @@ The Spice model files are located in the ```https://github.com/silicon-vlsi-org/
 
 - To quickly get started, there are few simple spice examples in ```<INSTALL_DIR>/eda-ngspice/examples/getStarted```
 - There is suggested order in README based on difficulty that you can follow.
-- You can copy the examples to a local directory and start ```ngspice`` in that directory.
-- Source/run the spice netlist in the spice command prompt: ```spice-1> source l1-res-div.sp```
-- You can continue running spice commands in the spice command prompt ie. ```ngspice-x >```
-- To quit simply type ```quit()```
-- You can also run ngspice is in batch mode: ```ngspice -b -r filename.raw -o filename.log input.sp```
+- You can copy the examples to a local directory and start `ngspice` in that directory.
+- Source/run the spice netlist in the spice command prompt: `spice-1> source l1-res-div.sp`
+- You can continue running spice commands in the spice command prompt ie. `ngspice-x >`
+- To quit simply type `quit()`
+- You can also run ngspice is in batch mode: `ngspice -b -r filename.raw -o filename.log input.sp`
 
 ## Technology
 All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
