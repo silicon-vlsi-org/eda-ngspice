@@ -1,5 +1,5 @@
 # NGSPICE 
-### Current distribution version 36.0 
+### Current distribution version 34.0 
 precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (Core)**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
 
 - http://ngspice.sourceforge.net
