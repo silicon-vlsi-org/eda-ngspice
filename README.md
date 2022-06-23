@@ -1,5 +1,5 @@
 # NGSPICE 
-### Current distribution version 34.0 
+### Current distribution version 36.0 
 precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (Core)**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
 
 - http://ngspice.sourceforge.net
@@ -18,9 +18,9 @@ precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (C
 - To download from the ```git``` repository:
   - ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
 - Change directory to the installed ngspice directory eg. ```cd eda-ngspice```
-- Checkout the desired version: ```git checkout v34.0```
+- Checkout the desired version: ```git checkout v36.0```
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
-  - ```* (HEAD detached at v34.0)```
+  - ```* (HEAD detached at v36.0)```
   - **NOTE** The revision history is maintained in VERSIONS.md
 
 - Add the following environment variables in your `~/.bashrc` 
