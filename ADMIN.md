@@ -13,7 +13,7 @@ This documentation is NOT for users, only if you are interested to compile, inst
  
 **USING SOURCE FROM GIT REPO**
 
-- ngspice-42 compiled on linode VM running Ubuntu 22.04 kernel  5.15.0-100-generic #110-Ubuntu
+- ngspice-42 compiled on linode VM running Ubuntu 22.04 kernel  5.15.0-100-generic #110-Ubuntu 03/09/24
   -ngspice-36 compiled on Linux AWS Lightsail **5.4.0-1049-aws** #51~**18.04.1-Ubuntu**
 - cd ```/home/ubuntu/sit-git-repos/eda-src```
 - ```git clone git://git.code.sf.net/p/ngspice/ngspice```
@@ -40,6 +40,7 @@ The source code was compiled on a CentOS 7 VM in Digital Ocean.
   - `# yum install centos-release-scl` : Install the __Software Community Library__ which contains the recent `gcc` versions. At the time of last compilation, __Developer Toolset 11__ is available. 
   - `# yum install devtoolset-11`
   - `$ scl enable devtoolset-11 bash` : Need to enable it before compiling the srouce code.
+  - **NOTE** Compiled in srv01 03/09/24
 
 **DOWNLOADING TARBALL AND COMPILING**
 
