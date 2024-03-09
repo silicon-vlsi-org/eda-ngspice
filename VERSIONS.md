@@ -3,7 +3,8 @@ Use these version numbers when checking out a release/version
 
 ## v42.0
 - ngspice 42 for Ubuntu 22.04
-  - updated: ../bin/ngspice ../scripts/spinit compile_ng42.sh
+- ngspice 42 for CentOS 7 
+- updated: ../bin/ngspice ../scripts/spinit compile_ng42.sh
 
 ## v36.0
 - ngspice 36 for Ubuntu 18.04 
