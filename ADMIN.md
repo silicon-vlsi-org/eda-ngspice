@@ -7,7 +7,8 @@ This documentation is NOT for users, only if you are interested to compile, inst
 
 - Prepare for building ngspice (See the INSTALL file in the ngspice source tree). First time this was compiled on LXLE on Virtual Box. Now I do it on the Ubuntu AWS Lightsail instance.
 - ```sudo apt install build-essential linux-headers-‘uname -r‘```
-- ```sudo apt install bison flex libx11-dev libxaw7-dev libtool libreadline-dev libncurces-dev```
+- ```sudo apt install bison flex libx11-dev libxaw7-dev libtool libreadline-dev libncurses-dev```
+- ```sudo apt install tcl tk```
 - ```sudo apt install automake autoconf texinfo``` (```INSTALL``` says only for git repo )
  
 **USING SOURCE FROM GIT REPO**
