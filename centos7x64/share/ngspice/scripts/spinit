@@ -12,17 +12,33 @@ set x11lineararcs
 ** set the number of threads in openmp
 ** default (if compiled with --enable-openmp) is: 2
 *set num_threads=4
-set interactive
 
-strcmp __flag $program "ngspice"
-if $__flag = 0
+* comment out if central osdi management is set up
+unset osdi_enabled
 
-* codemodel /home/centos/ngspice-bin/lib/ngspice/spice2poly.cm
-* codemodel /home/centos/ngspice-bin/lib/ngspice/analog.cm
-* codemodel /home/centos/ngspice-bin/lib/ngspice/digital.cm
-* codemodel /home/centos/ngspice-bin/lib/ngspice/xtradev.cm
-* codemodel /home/centos/ngspice-bin/lib/ngspice/xtraevt.cm
-* codemodel /home/centos/ngspice-bin/lib/ngspice/table.cm
+* Load the codemodels
+if $?xspice_enabled
+
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/spice2poly.cm
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/analog.cm
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/digital.cm
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/xtradev.cm
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/xtraevt.cm
+* codemodel /home/centos/eda-bins/ngspice-42/lib/ngspice/table.cm
 
 end
-unset __flag
+
+* Load the OpenVAF/OSDI models
+if $?osdi_enabled
+
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/asmhemt.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/bjt504t.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/BSIMBULK107.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/BSIMCMG.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/HICUMl0-2.0.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/psp103.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/r2_cmc.osdi
+ osdi /home/centos/eda-bins/ngspice-42/lib/ngspice/vbic_4T_et_cf.osdi
+ 
+end
+
