@@ -18,10 +18,10 @@ precompiled for **64-bit 18.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (C
 - To download from the ```git``` repository:
   - ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
 - Change directory to the installed ngspice directory eg. ```cd eda-ngspice```
-- Checkout the desired version: ```git checkout v36.0```
+- Checkout the desired version: eg. ```git checkout v42.0```
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
-  - ```* (HEAD detached at v36.0)```
-  - **NOTE** The revision history is maintained in VERSIONS.md
+  - ```* (HEAD detached at v42.0)```
+  - **NOTE** The revision history is maintained in [VERSIONS.md](VERSIONS.md)
 
 - Add the following environment variables in your `~/.bashrc` 
 ```bash
@@ -29,6 +29,8 @@ export  SPICE_LIB_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/share/ngspice
 export  SPICE_EXEC_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/bin
 export  PATH=$PATH:$SPICE_EXEC_DIR
 ```
+Use the apporpriate locations for CentOS-7
+
 There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can overwrite any of the initilization by adding commands to a local `~/.spiceinit` .
 
 The Spice model files are located in the ```https://github.com/silicon-vlsi-org/eda-technology``` repository.
