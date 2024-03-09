@@ -13,17 +13,18 @@ This documentation is NOT for users, only if you are interested to compile, inst
  
 **USING SOURCE FROM GIT REPO**
 
-- Compiled on Linux AWS Lightsail **5.4.0-1049-aws** #51~**18.04.1-Ubuntu**
+- ngspice-42 compiled on linode VM running Ubuntu 22.04 kernel  5.15.0-100-generic #110-Ubuntu
+  -ngspice-36 compiled on Linux AWS Lightsail **5.4.0-1049-aws** #51~**18.04.1-Ubuntu**
 - cd ```/home/ubuntu/sit-git-repos/eda-src```
 - ```git clone git://git.code.sf.net/p/ngspice/ngspice```
-- ```git checkout ngspice-34``` (Check with ```git branch``` command)
-- ```git fetch```
 - ```cd ngspice```
+- ```git checkout ngspice-42``` (Check with ```git branch``` command)
+- ```git fetch```
 - ```mkdir release```
-- Copied ```compile_linux.sh``` to ```compile_ng34.sh``` and edited the following:
+- Copied ```compile_linux.sh``` to ```compile_ng42.sh``` and edited the following:
   - ```../configure --with-x --with-readline=yes --disable-debug --prefix=/home/ubuntu/eda-bins/ngspice-34 CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"```
 - Ran the script ```./compile_ng34.sh```
-- On successful compilation, the new compiled binaries/libs/should be in the target directory eg. ```/home/ubuntu/eda-bins/ngspice-34```
+- On successful compilation, the new compiled binaries/libs/should be in the target directory eg. ```/home/ubuntu/eda-bins/ngspice-42```
  
 ## Compiling and Installing Ngspice in CentOS 7
 
@@ -59,18 +60,18 @@ Check out this [doc](https://docs.github.com/en/github/administering-a-repositor
   
 - Check out the difference between the previous and current version: eg.
 ```bash
-  diff -qr ~/eda-bins/ngspice-34/glnxa64  <GIT-INSTALL_DIR>/eda-ngspice/glnxa64
+  diff -qr ~/eda-bins/ngspice-42  <GIT-INSTALL_DIR>/eda-ngspice/glnxa64
 ```
 - Copy only the differences to the git repo, `add`, `commit` and `push` to the `github`.
   - **IMPORTANT** Make sure you backup the previous binaries in case you need it.
 - Navigate to the main repo page eg. github.com/silicon-vlsi-org/eda-ngspice
 - To the right of the list of files, click **Create a new release** under the **Release** section.
-- Tag the release version eg. ```v34.0```
-  - The major release ```v34``` reflects the version of ngspice.
+- Tag the release version eg. ```v42.0```
+  - The major release ```v42``` reflects the version of ngspice.
   - The minor release ```vxx.0``` reflects any changes done locally eg. examples, docs, etc.
 - Do not add any binaries and do not select pre-release.
 - Publish the release. 
-- Now users can checkout this version eg. ```git checkout v34.0```
+- Now users can checkout this version eg. ```git checkout v42.0```
   
 
 ## Tasks
