@@ -1,18 +1,12 @@
 # NGSPICE 
-### Current distribution version 42.0 
+## Current distribution version 42.0 
 precompiled for **64-bit 22.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (Core)**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
 
 - http://ngspice.sourceforge.net
 - [NGSpice] is a open source spice simulator for electric and electronic circuits. 
 - [NGSpice Reference Manual][NGSpiceMan]: Complete reference manual in HTML format.
 
-
-## Table of Content
-- [Downloading & Setting Up Ngspice](#downloading-&-setting-up-ngspice)
-- [QuickStart Guide](#Quick-Start-Guide)
-- [Technology](#Technology)
-
-## Downloading & Setting Up Ngspice
+# Downloading & Setting Up Ngspice
 
 - Change directory ```cd``` to install directory <INSTALL_DIR> e.g. ```/home/user/cad```
 - To download from the ```git``` repository:
@@ -35,7 +29,7 @@ There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can ove
 
 The Spice model files are located in the ```https://github.com/silicon-vlsi-org/eda-technology``` repository.
 
-## Quick Start Guide
+# Quick Start Guide
 
 - To quickly get started, there are few simple spice examples in ```<INSTALL_DIR>/eda-ngspice/examples/getStarted```
 - There is suggested order in README based on difficulty that you can follow.
@@ -45,7 +39,27 @@ The Spice model files are located in the ```https://github.com/silicon-vlsi-org/
 - To quit simply type `quit()`
 - You can also run ngspice is in batch mode: `ngspice -b -r filename.raw -o filename.log input.sp`
 
-## Technology
+# Helpful Tips
+
+## Output plot to a file 
+
+ngspice offers a variety of writing simulation results into a file. The simplest format to output a plot to a file is `SVG`. 
+
+- The following two lines can be added in the `.control` section to output a plot in the `SVG` fomat:
+
+```bash
+.control
+  RUN
+  set hcopydevtype = svg
+  hardcopy plot_1.svg v(vout) title 'title' xlabel 'Vin(V)' ylabel 'Vout(V)'
+.endc
+```
+- The output file `plot_1.svg` can simply be opened in a web browser.
+- The location of the file can be found using a `File Explorer` by navigating to `Linux -> home -> ...`
+- The location can be copied from the _navigation bar_ and pasted in a web browser to view the plot in a web browser.
+
+
+# Technology
 All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
 
 
