@@ -1,6 +1,12 @@
 # VERSIONS
 Use these version numbers when checking out a release/version
 
+## v44.2.1
+- same v44.2 but compiled with `--enable-relpath`
+- This enables relative path for XPice models and spiinit
+  - To fix error for XPice models not found when the install driectory was changed to what was used to for `--prefix`
+  - Now getting error spiinit file not found. Need to fix it.
+    
 ## v44.2
 - ngspice 44.4 for Ubuntu 24.04
 - Cider, Xspice and openMP is enabled in this compile.
