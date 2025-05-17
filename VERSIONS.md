@@ -1,6 +1,20 @@
 # VERSIONS
 Use these version numbers when checking out a release/version
 
+## v44.2
+- ngspice 44.4 for Ubuntu 24.04
+- Used for xschem with SKY130 integration
+- updated:
+  - eda-ngspice/bin/ngspice
+  - eda-ngspice/share/ngspice/scripts/spinit 
+  - eda-ngspice/lib 
+  - eda-ngspice/share/ngspice/scripts/ciderinit 
+  - eda-ngspice/share/ngspice/scripts/devaxis 
+  - eda-ngspice/share/ngspice/scripts/devload 
+  - eda-ngspice/share/ngspice/scripts/ghnggen 
+  - eda-ngspice/share/ngspice/scripts/src 
+  - eda-ngspice/share/ngspice/scripts/vlnggen 
+
 ## v42.0
 - ngspice 42 for Ubuntu 22.04
 - ngspice 42 for CentOS 7 
