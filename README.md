@@ -1,6 +1,6 @@
 # NGSPICE 
-## Current distribution version 42.0 
-precompiled for **64-bit 22.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (Core)**. It's also tested on a light-weight Ubuntu-variant LXLE distro. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
+## Current distribution version 44.2 
+precompiled for **64-bit 24.04 Ubuntu & Ubuntu-based Linux**. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
 
 - http://ngspice.sourceforge.net
 - [NGSpice] is a open source spice simulator for electric and electronic circuits. 
@@ -12,9 +12,9 @@ precompiled for **64-bit 22.04 Ubuntu & Ubuntu-based Linux** and **CentOS 7.9 (C
 - To download from the ```git``` repository:
   - ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
 - Change directory to the installed ngspice directory eg. ```cd eda-ngspice```
-- Checkout the desired version: eg. ```git checkout v42.0```
+- Checkout the desired version: eg. ```git checkout v44.2```
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
-  - ```* (HEAD detached at v42.0)```
+  - ```* (HEAD detached at v44.2)```
   - **NOTE** The revision history is maintained in [VERSIONS.md](VERSIONS.md)
 
 - Add the following environment variables in your `~/.bashrc` 
@@ -63,6 +63,9 @@ ngspice offers a variety of writing simulation results into a file. The simplest
 All technology files maintained in the https://github.com/silicon-vlsi-org/eda-technology
 
 
+# Release History
+  
+- **NOTE** The revision history is maintained in [VERSIONS.md](VERSIONS.md)
 
 * * *
 
