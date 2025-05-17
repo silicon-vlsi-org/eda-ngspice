@@ -48,7 +48,7 @@ else
    if [ $? -ne 0 ]; then  echo "cd release failed"; exit 1 ; fi
   echo "configuring for 64 bit release"
   echo
-  ../configure --with-x --enable-cider --enable-xspice --disable-debug --with-readline=yes --enable-openmp --enable-osdi --prefix="/home/usrvnc/eda-bins/ngspice-44-2" CFLAGS="-m64 -O2" LDFLAGS="-m64 -s" 
+  ../configure --with-x --enable-relpath --enable-cider --enable-xspice --disable-debug --with-readline=yes --enable-openmp --enable-osdi --prefix="/home/usrvnc/eda-bins/ngspice-44-2" CFLAGS="-m64 -O2" LDFLAGS="-m64 -s" 
 fi
 if [ $? -ne 0 ]; then  echo "../configure failed"; exit 1 ; fi
 
