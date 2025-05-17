@@ -1,6 +1,6 @@
 # NGSPICE 
-## Current distribution version 44.2 
-precompiled for **64-bit 24.04 Ubuntu & Ubuntu-based Linux**. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
+## Current distribution version 44.2.1 
+**ngspice 44.2** precompiled for **64-bit 24.04 Ubuntu & Ubuntu-based Linux**. If you are interested in compiling from the source, instructions in [Compiling and Installing Ngspice](ADMIN.md) should help.
 
 - http://ngspice.sourceforge.net
 - [NGSpice] is a open source spice simulator for electric and electronic circuits. 
@@ -12,9 +12,9 @@ precompiled for **64-bit 24.04 Ubuntu & Ubuntu-based Linux**. If you are interes
 - To download from the ```git``` repository:
   - ```git clone https://github.com/silicon-vlsi-org/eda-ngspice```
 - Change directory to the installed ngspice directory eg. ```cd eda-ngspice```
-- Checkout the desired version: eg. ```git checkout v44.2```
+- Checkout the desired version: eg. ```git checkout v44.2.1```
   - To make sure you are on the right version type ```git branch``` and your output should have a line like this :
-  - ```* (HEAD detached at v44.2)```
+  - ```* (HEAD detached at v44.2.1)```
   - **NOTE** The revision history is maintained in [VERSIONS.md](VERSIONS.md)
 
 - Add the following environment variables in your `~/.bashrc` 
