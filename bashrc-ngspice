@@ -1,0 +1,5 @@
+## This file needs to be sourced in ~/.bashrc
+## make CAD_DIR is set in .bashrc
+export  SPICE_LIB_DIR=$CAD_DIR/eda-ngspice/glnxa64/share/ngspice
+export  SPICE_EXEC_DIR=$CAD_DIR/eda-ngspice/glnxa64/bin
+export  PATH=$PATH:$SPICE_EXEC_DIR
