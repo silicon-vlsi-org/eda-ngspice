@@ -17,12 +17,14 @@
   - ```* (HEAD detached at v44.2.1)```
   - **NOTE** The revision history is maintained in [VERSIONS.md](VERSIONS.md)
 
-- Add the following environment variables in your `~/.bashrc` 
+- Add the following environment variables in your `~/.bashrc` ($CAD_DIR must be set in .bashrc)
 ```bash
-export  SPICE_LIB_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/share/ngspice
-export  SPICE_EXEC_DIR=<INSTALL_DIR>/eda-ngspice/glnxa64/bin
+export  SPICE_LIB_DIR=$CAD_DIR/eda-ngspice/glnxa64/share/ngspice
+export  SPICE_EXEC_DIR=$CAD_DIR/eda-ngspice/glnxa64/bin
 export  PATH=$PATH:$SPICE_EXEC_DIR
 ```
+**NOTE** The file `bashrc-ngspice` in this repo can be sourced in `.bashrc`  
+
 Use the apporpriate locations for CentOS-7
 
 There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can overwrite any of the initilization by adding commands to a local `~/.spiceinit` .
