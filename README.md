@@ -29,6 +29,13 @@ Use the apporpriate locations for CentOS-7
 
 There is a initialization script in `$SPICE_LIB_DIR/scripts/spinit`. You can overwrite any of the initilization by adding commands to a local `~/.spiceinit` .
 
+**IMPORTANT NOTE** : In order to avoid ngspice ake a long time checking the model files each time you start the sim, put the following two lines in `.spiceinit`
+
+```
+set ngbehavior=hsa
+set ng_nomodcheck
+```
+
 The Spice model files are located in the ```https://github.com/silicon-vlsi-org/eda-technology``` repository.
 
 # Quick Start Guide
